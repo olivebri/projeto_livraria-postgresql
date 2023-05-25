@@ -54,9 +54,9 @@ class CategoriaService:
         print('\nAdicionando categoria...')
 
         try:
-            id = self.__categoria_dao.ultimo_id() + 1
+            # ultimo id removido
             nome = input('Digite o nome da categoria: ')
-            nova_categoria = Categoria(id, nome)
+            nova_categoria = Categoria(nome) # alterado
             self.__categoria_dao.adicionar(nova_categoria)
             print('Categoria adicionada com sucesso!')
         except Exception as e:
@@ -64,7 +64,7 @@ class CategoriaService:
             return
 
         input('Pressione uma tecla para continuar...')
-
+        
     def remover(self):
         print('\nRemovendo categoria...')
 

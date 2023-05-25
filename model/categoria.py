@@ -1,8 +1,11 @@
 class Categoria:
 
-    def __init__(self, id: int, nome: str):
-        self.__id: int = id
+    def __init__(self, nome: str): # alterado
+        self.__id: int = 0 # alterado
         self.__nome: str = nome
+
+    def __str__(self):
+        return f'{self.__id} | {self.__nome}'
 
     @property
     def id(self) -> int:
