@@ -16,6 +16,7 @@ class CategoriaDAO:
         for result in resultados:
             cat = Categoria(result[1])
             cat.id = result[0]
+            
             categorias.append(cat)
 
         cursor.close()
